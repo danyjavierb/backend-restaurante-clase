@@ -5,6 +5,7 @@ const { DB_USER, DB_PASS, DB_HOST, DB_NAME, DB_PORT } = process.env;
 const conString = `mysql://${DB_USER}${
   DB_PASS && `:${DB_PASS}`
 }@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
+console.log(conString);
 
 const instanciaSequelize = new Sequelize(conString, {
   operatorAliases: false,
